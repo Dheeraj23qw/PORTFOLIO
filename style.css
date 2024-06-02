@@ -1,0 +1,537 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: hsl(0, 29%, 97%);
+}
+
+.header-text.start {
+  margin-top: 10px;
+}
+
+#header {
+  width: 100%;
+  height: 140vh;
+  background: url("images/itachi.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-position-y: 220px;
+  background-color: #000000f6;
+}
+
+.container {
+  padding: 10px 10%;
+}
+
+.text{
+  color: #e75050;
+  font-size: 50px;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav img {
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 70px 12px;
+  position: relative;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: hsl(0, 84%, 40%);
+  font-size: 21px;
+  font-weight: 900;
+  margin-left: 25px;
+}
+
+nav ul li a:after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: hwb(356 5% 11%);
+  transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+.header-text {
+  font-size: 27px;
+}
+
+.header-text p {
+  font-size: 35px;
+  font-weight: 600;
+  margin-top: 100px;
+  color: hwb(0 17% 9%);
+}
+
+.header-text span {
+  color: hsl(0, 78%, 55%);
+  font-weight: 900;
+}
+
+/* about myself */
+
+#about {
+  padding: 80px 0;
+
+  background-color: #000000f6;
+}
+
+/* Apply a smooth scale transition to the image by default */
+#about img {
+  margin-top: 38px;
+  transition: transform 3s;
+}
+
+/* When hovered, scale the image by 10% */
+#about img:hover {
+  transform: scale(1.1);
+}
+
+#skills li span {
+  font-size: large;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /* Allow items to wrap onto the next line */
+}
+
+.about-col-1 {
+  flex-basis: 48%;
+  /* Adjust the width as needed */
+}
+
+.about-col-1 img {
+  width: 84%;
+}
+
+.about-col-2 {
+  flex-basis: 48%;
+  /* Adjust the width as needed */
+}
+
+.sub-title {
+  font-weight: 700;
+  font-size: 90px;
+  color: #d20404;
+}
+
+.intro {
+  font-size: 18px;
+  font-weight: 600;
+  color: hsl(0, 6%, 91%);
+  margin: 25px 0 30px 0;
+}
+
+.tab-titles {
+  display: flex;
+  margin: 20px 0 40px;
+}
+
+.tab-links {
+  margin-right: 40px;
+  font-size: 23px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #f84e4e;
+  position: relative;
+}
+
+.tab-links::after {
+  content: " ";
+  width: 0;
+  height: 3px;
+  background: white;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s;
+}
+
+.tab-links.active-link::after {
+  width: 50%;
+}
+
+.tab-contents ul li {
+  list-style: none;
+  margin: 10px 0;
+}
+
+.tab-contents ul li span {
+  color: hsl(0, 91%, 48%);
+  font-size: 25px;
+}
+
+.tab-contents {
+  display: none;
+}
+
+.tab-contents.active-tab {
+  display: block;
+}
+
+/* services */
+
+#services {
+  padding: 60px 0;
+  background-color: #000000f6;
+}
+
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+
+.services-list div {
+  background-color: #262626;
+  padding: 40px;
+  font-size: 13px;
+  font-weight: 300;
+  border-radius: 20px;
+  transition: background-color 0.5s, transform 0.5s;
+}
+
+.services-list div i {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.services-list div h2 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.services-list div a {
+  font-size: 15px;
+  margin-top: 25px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.services-list div:hover {
+  background-color: hsl(0, 94%, 39%);
+  color: #fff;
+  transform: translateY(-11px);
+}
+
+.services-list div p {
+  font-size: 15px;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+
+/* portfolio */
+
+.sub-title.work {
+  font-size: 70px;
+}
+
+#portfolio {
+  padding: 80px 0;
+  background-color: #000000f6;
+}
+
+.work-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+
+.work {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.work img {
+  width: 100%;
+  border-radius: 15px;
+  display: block;
+  transition: transform 0.6s;
+}
+
+.layer {
+  height: 0;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), #ff004f);
+  border-radius: 15px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  transition: height 0.6s;
+}
+
+.layer h3 {
+  font-weight: 800;
+  margin-bottom: 20px;
+  font-size: 30px;
+  color: white;
+}
+
+.layer a {
+  margin-top: 20px;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 60px;
+  text-align: center;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background: #fff;
+}
+
+.work:hover img {
+  transform: scale(1.1);
+}
+
+.work:hover .layer {
+  height: 100%;
+}
+
+.btn {
+  display: block;
+  margin: 50px auto;
+  width: fit-content;
+  padding: 10px 50px;
+  border: 1px solid #ff004f;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 15px;
+  transition: background-color 0.5s;
+}
+
+.btn:hover {
+  background: #e75050;
+}
+
+/*  contact */
+
+#contact {
+  background-color: #000000f6;
+}
+.contact-left {
+  flex-basis: 45%;
+}
+
+.contact-right {
+  flex-basis: 50%;
+}
+
+.contact-left p {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+
+.contact-left p i {
+  color: #ff004f;
+  margin-right: 15px;
+  font-size: 30px;
+}
+
+.Social-icons a {
+  text-decoration: none;
+  font-size: 30px;
+  margin-top: 6px;
+  margin-right: 20px;
+  color: #ababab;
+  transition: 0.5s;
+  display: inline-block;
+}
+
+.Social-icons a:hover {
+  transform: scale(1.5);
+  color: #e75050;
+}
+
+.btn.bt2 {
+  display: inline-block;
+  background-color: #ff004f;
+}
+
+.contact-right form {
+  width: 100%;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #161515;
+  border-radius: 9px;
+  outline: none;
+  font-size: 18px;
+  transition: 0.5s;
+  margin: 15px 0;
+  background: #262626;
+  color: #fff;
+}
+
+.btn.submit {
+  background: hsl(357, 77%, 54%);
+
+  transition: 0.5s;
+}
+
+.btn.submit:hover {
+  background: #e75050;
+}
+
+form .btn2 {
+  padding: 14px 60px;
+  font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.copyright {
+  width: 100%;
+  font-weight: bold;
+  height: 90px;
+  text-align: center;
+  padding: 25px 0;
+  background: #262626;
+  margin-top: 20px;
+}
+
+#msg {
+  color: #61b752;
+  margin-top: -40px;
+  display: block;
+  text-align: center;
+}
+
+.form-control:focus {
+  border-color: #c00a0a;
+}
+
+nav i.fa-solid {
+  display: none;
+}
+
+/*....css for small screens */
+
+@media only screen and (max-device-width: 400px) {
+  .header-text {
+    font-size: 16px;
+    margin-top: 100%;
+  }
+
+  .header-text h1 {
+    font-size: 25px;
+  }
+  /* Font Awesome Solid Icons */
+  nav i.fa-solid {
+    display: block;
+    font-size: 25px;
+  }
+
+  /* Navigation Menu */
+  nav ul {
+    background: #ff004f;
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+    z-index: 2;
+    transition: right 0.5s;
+  }
+
+  /* Navigation Menu Items */
+  nav ul li {
+    display: block;
+    margin: 25px;
+  }
+
+  /* Styling for Font Awesome Solid Icons in the Navigation Menu */
+  nav ul i.fa-solid {
+    position: absolute;
+    top: 10px;
+    left: 25px;
+    cursor: pointer;
+  }
+
+  .sub-title {
+    font-size: 40px;
+  }
+
+  .about-col-1,
+  .about-col-2 {
+    flex-basis: 100%;
+  }
+  .about-col-1 {
+    margin-bottom: 30px;
+  }
+
+  .about-col-2 {
+    margin-top: 30px;
+    font-size: 16px;
+  }
+
+  .tab-links {
+    font-size: 16px;
+    margin-right: 20px;
+  }
+  .contact-left,
+  .contact-right {
+    flex-basis: 100%;
+  }
+  .copyright {
+    font-size: 14px;
+  }
+  /* nav ul {
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right:0;
+        width: 200px;
+        height: 80vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+        display:none;
+    } */
+}
